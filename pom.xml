@@ -7,10 +7,10 @@
   <name>quarkus-testng</name>
   <url>http://www.example.com</url>
   <properties>
-    <quarkus-plugin.version>1.3.0.Final</quarkus-plugin.version>
+    <quarkus-plugin.version>1.3.2.Final</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-bom-deployment</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-    <quarkus.platform.version>1.3.0.Final</quarkus.platform.version>
+    <quarkus.platform.version>1.3.2.Final</quarkus.platform.version>
     <testng.version>7.1.0</testng.version>
     <surefire-plugin.version>2.22.1</surefire-plugin.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
@@ -19,6 +19,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <version.fmt.plugin>2.9</version.fmt.plugin>
     <version.sortpom.plugin>2.11.0</version.sortpom.plugin>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -37,6 +39,16 @@
     </dependencies>
   </dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-bootstrap-core</artifactId>
