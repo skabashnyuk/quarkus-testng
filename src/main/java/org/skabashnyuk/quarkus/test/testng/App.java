@@ -1,4 +1,4 @@
-package org.skabashnyuk.quarkus;
+package org.skabashnyuk.quarkus.test.testng;
 
 /** Hello world! */
 public class App {
